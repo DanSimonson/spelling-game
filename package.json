@@ -1,0 +1,29 @@
+{
+  "name": "scrabble-in-javascript",
+  "version": "1.0.0",
+  "description": "Spelling practice",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "browserify main.js -o bundle.js",
+    "watch": "watchify main.js -o bundle.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DanSimonson/scrabble-in-javascript.git"
+  },
+  "author": "Dan Simonson",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/DanSimonson/scrabble-in-javascript/issues"
+  },
+  "homepage": "https://github.com/DanSimonson/scrabble-in-javascript#readme",
+  "dependencies": {
+    "browserify": "^16.2.3",
+    "jquery": "^3.3.1",
+    "unirest": "^0.5.1"
+  },
+  "devDependencies": {
+    "watchify": "^3.11.0"
+  }
+}
