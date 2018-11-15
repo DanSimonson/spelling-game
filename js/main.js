@@ -1,4 +1,4 @@
-var unirest = require("unirest");
+/*var unirest = require("unirest");
 
 function runScript(e) {
   e.preventDefault();
@@ -157,5 +157,5 @@ document.addEventListener("DOMContentLoaded", function() {
     letter = word[i];
     sum += alphabet[letter];
   }
-  alert(sum);*/
-});
+  alert(sum);
+});*/

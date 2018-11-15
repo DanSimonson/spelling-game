@@ -28,7 +28,6 @@ document.addEventListener("DOMContentLoaded", function() {
     showResult();
   }
   function startGame() {
-    //load class flipX into odd divs
     document.querySelector("div#one.lettersOdd").classList.add("flipX");
     document.querySelector("div#three.lettersOdd").classList.add("flipX");
     document.querySelector("div#five.lettersOdd").classList.add("flipX");
@@ -44,11 +43,21 @@ document.addEventListener("DOMContentLoaded", function() {
     //window.location.reload();
     //call method to slice array and input into dom
     setTimeout(getResult, 9000);
-    for (i = 0; i < 10; i++) {
+    for (let i = 0; i < 10; i++) {
       document.getElementById(divD[i]).innerHTML = "";
     }
     setTimeout(removeFlip, 9000);
+    var startTime = new Date().getTime();
+    let stopMe = setInterval(function() {
+      $(".loader").css({ visibility: "visible" });
+      if (new Date().getTime() - startTime > 8000) {
+        clearInterval(stopMe);
+        $(".loader").css({ visibility: "hidden" });
+        return;
+      }
+    }, 2000);
   }
+
   function removeFlip() {
     //remove class flipX into odd divs
     document.querySelector("div#one.lettersOdd").classList.remove("flipX");
