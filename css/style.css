@@ -9,6 +9,7 @@ body {
     url("../scrabble.jpg");
   background-size: cover;
   background-position: stretch;
+  height:100vh;
 }
 
 .header {
